@@ -13,7 +13,7 @@ var points = [
   { x: 800, y: 180}
 ];
 
-coins = [
+stars = [
   { x: 650, y: 200 },
   { x: 700, y: 50 }
 ];
@@ -24,7 +24,7 @@ var bgPosY = 235;
 function preload(){
   bgImg = loadImage("assets/background.png");
   playerImg = loadImage("./assets/player1.png");
-  coinImg = loadImage("./assets/coins.png");
+  starImg = loadImage("./assets/star.png");
 }
 
 function setup() {
@@ -59,9 +59,7 @@ function draw() {
   for(var i=0; i< points.length; i++){
     drawPoints(i);
     points[i].x -= 0.3;
-    handlePoints(i);
-    
-   
+    handlePoints(i);  
   }
 }
 
@@ -76,10 +74,10 @@ function drawPoints(i) {
   pop();
 }
 
-function drawCoins(i) {
+function drawStars(i) {
   push();
   imageMode(CENTER);
-  image(coinImg, coins[i].x, coins[i].y, 30, 30);
+  image(starImg, stars[i].x, stars[i].y, 30, 30);
   pop();
 }
 
@@ -93,8 +91,8 @@ function addPoints() {
   }
 }
 
-function addCoins(){
- // write code to add more coins
+function addStars(){
+ // write code to add more stars
 
 
 
@@ -108,11 +106,11 @@ function handlePoints(i){
   }
 }
 
-function handleCoins() {
-  for (var i = 0; i < coins.length; i++) {
-     //call drawCoins() here
+function handleStars() {
+  for (var i = 0; i < stars.length; i++) {
+     //call drawStars() here
 
-     // write code to move the coins
+     // write code to move the stars
   
 
 
